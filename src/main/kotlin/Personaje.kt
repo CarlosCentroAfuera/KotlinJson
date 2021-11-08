@@ -1,6 +1,6 @@
 import com.google.gson.Gson
 
-class Personaje(var nombre : String, var edad : Int) {
+data class Personaje(var nombre : String, var edad : Int) {
 
     companion object {
         fun fromJson(json:String) : Personaje {
@@ -13,10 +13,5 @@ class Personaje(var nombre : String, var edad : Int) {
         val gson = Gson()
         return gson.toJson(this)
     }
-
-    override fun toString(): String {
-        return "$nombre $edad"
-    }
-
 
 }
